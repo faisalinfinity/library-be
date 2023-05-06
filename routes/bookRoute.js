@@ -14,9 +14,9 @@ const bookRoute = express.Router();
 bookRoute.get("/books", getAllBooks);
 bookRoute.get("/books/:id", getSingleBook);
 bookRoute.post("/books", authorizationMiddleware, postBooks);
-bookRoute.delete("books/:id", authorizationMiddleware, deleteBooks);
-bookRoute.patch("books/:id", authorizationMiddleware, updateBooks);
-bookRoute.put("books/:id", authorizationMiddleware, updateBooks);
+bookRoute.delete("/books/:id", authorizationMiddleware, deleteBooks);
+bookRoute.patch("/books/:id", authorizationMiddleware, updateBooks);
+bookRoute.put("/books/:id", authorizationMiddleware, updateBooks);
 
 module.exports = {
   bookRoute,
